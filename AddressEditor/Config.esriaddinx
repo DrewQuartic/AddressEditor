@@ -14,13 +14,18 @@
     <ArcMap>
       <Commands>
         <Button id="Quartic_AddressEditor_BulkUpdate" class="BulkUpdate" message="This tool updates the location attribute of all the currently selected address Points" caption="Update Selected" tip="Click to update all selected Address Points" category="Add-In Controls" image="Images\BulkUpdate.png" />
-        <Tool id="Quartic_AddressEditor_AddressEdit" class="AddressEdit" message="This tool can be used to edit address point attributes" caption="Address edit tools" tip="Tool to edit address Points" category="Add-In Controls" image="Images\AddressEdit.png" />
-        <Button id="Quartic_AddressEditor_AddressAttributes2" class="AddressAttributes2Command" caption="Update Selected" tip="Click to update all selected Address Points" category="Add-In Controls" image="Images\BulkUpdate.png" />
+        <ToolPalette id="Quartic_AddressEditor_My_Tool_Palette" caption="My Tool Palette" category="Add-In Controls" isMenuStyle="false" columns="0">
+          <Items />
+        </ToolPalette>
       </Commands>
+      <Toolbars>
+        <Toolbar id="Quartic_AddressEditor_Toolbar" caption="Address Editor Toolbar" showInitially="false">
+          <Items>
+            <Button refID="Quartic_AddressEditor_BulkUpdate"  />
+          </Items>
+        </Toolbar>
+      </Toolbars>
       <DockableWindows>
-        <DockableWindow id="Quartic_AddressEditor_AddressAttributes" class="AddressAttributes+AddinImpl" caption="UpdateAttributes" image="Images\AddressAttributes.png">
-          <InitialPlacement height="300" width="300" state="pinned" position="left" />
-        </DockableWindow>
       </DockableWindows>
       <Editor>
         <Extensions>

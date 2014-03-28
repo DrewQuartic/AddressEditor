@@ -65,7 +65,7 @@ namespace AddressEditor
 
         public AddressEditorToolbar()
         {
-            AddItem("AddressEditor.AddressEdit");
+            AddItem("AddressEditor.BulkUpdate");
             
             //
             // TODO: Define your toolbar here by adding items
