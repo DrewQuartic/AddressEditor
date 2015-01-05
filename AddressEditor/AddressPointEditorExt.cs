@@ -77,9 +77,14 @@ namespace AddressEditor
 
         void Events_OnChangeFeature(ESRI.ArcGIS.Geodatabase.IObject obj)
         {
-            frmOnChange frmOnChange = new frmOnChange();
-            frmOnChange.obj = obj;
-            frmOnChange.ShowDialog();
+            if (obj.Class.AliasName == "T.AddressPoint")
+            {
+                frmOnChange frmOnChange = new frmOnChange();
+                frmOnChange.obj = obj;
+                frmOnChange.ShowDialog();
+            }
+            
+
         }
 
         void OnBeforeStopEditing(bool save)
